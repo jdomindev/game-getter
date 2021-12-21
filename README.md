@@ -1,1 +1,1 @@
-# game-gitter
+# game-getter
