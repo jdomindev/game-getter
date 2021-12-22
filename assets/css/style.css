@@ -1,0 +1,38 @@
+
+body {
+font-family: Teko, sans-serif;
+}
+
+.navbar, .page-footer {
+    background-color: #6545B2;
+}
+
+.wishlist {
+    font-size: 20px !important;
+}
+
+.platform-dropdown {
+    padding: 0px !important;
+}
+
+
+.search {
+    background-color: #6545B2;
+    font-size: 20px !important;
+
+}
+
+.search input {
+    width: 80%;
+    padding: 10px;
+    border: #4f4f4f 3px solid;
+}
+
+.contact-section {
+    background-color: #808080;
+    color: white;
+}
+
+.page-footer {
+    padding-top: 0px !important;
+ }
