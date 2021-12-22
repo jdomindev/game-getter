@@ -36,3 +36,7 @@ font-family: Teko, sans-serif;
 .page-footer {
     padding-top: 0px !important;
  }
+
+ .option {
+   font-family: 'FontAwesome';
+ }

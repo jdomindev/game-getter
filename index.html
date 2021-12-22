@@ -93,35 +93,29 @@
         <div class="row">
           <div class="col s12">
             <div class="row">
-              <div class="col s6 platform-dropdown">
-                <!-- Dropdown Trigger -->
-                <a class="dropdown-trigger btn" href="#" data-target="dropdown1">Platforms</a>
-                <!-- Dropdown Structure -->
-                <ul id="dropdown1" class="dropdown-content">
-                  <li><a value="4">PC</a></li>
-                  <li><a value="186">Xbox Series S/X</a></li>
-                  <li>
-                    <a value="187"><i class="“fa-brands" fa-playstation”></i>Playstation 5</a>
-                  </li>
-                  <li>
-                    <a value="1"><i class="“fa-brands" fa-xbox”></i>Xbox One</a>
-                  </li>
-                  <li>
-                    <a value="18"><i class="“fa-brands" fa-playstation”></i>Playstation 4</a>
-                  </li>
-                  <li>
-                    <a value="7"><i class=""></i>Nintendo Switch</a>
-                  </li>
-                  <li>
-                    <a value="3"><i class=""></i>iOS</a>
-                  </li>
-                  <li>
-                    <a value="21"><i class=""></i>Android</a>
-                  </li>
-                  <li>
-                    <a value="5"><i class=""></i>macOS</a>
-                  </li>
-                </ul>
+              <div class="input-field col s6">
+                <select multiple>
+                  <option value="" disabled selected>---</option>
+                  <option value="4">PC</option>
+                  <option value="186">Xbox Series S/X</option>
+                  <option value="187">Playstation 5</option>
+                  <option value="1">Xbox One</option>
+                  <option value="18">Playstation 4</option>
+                  <option value="7">Nintendo Switch</option>
+                  <option value="3">iOS</option>
+                  <option value="21">Android</option>
+                  <option value="5">macOS</option>
+                </select>
+                <label>Choose your platform(s):</label>
+              </div>
+              <div class="input-field col s6">
+                <select multiple>
+                  <option value="" disabled selected>---</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+                <label>Filter by genre:</label>
               </div>
             </div>
           </div>
@@ -169,6 +163,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="assets/js/index-script.js"></script>
     <script>
       // slider script
       var slider = document.querySelector(".slider");
@@ -178,10 +173,6 @@
         transition: 800,
         interval: 6000,
       });
-
-      // dropdown script
-      var dropdown = document.querySelectorAll(".dropdown-trigger");
-      M.Dropdown.init(dropdown, {});
     </script>
   </body>
 </html>

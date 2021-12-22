@@ -22,3 +22,10 @@ const searchListener = (query, filters) => {
     window.location.replace(`search-results.html?search=${query}&${queryString}`);
   }
 }
+
+//Called on load
+$(document).ready(function() {
+  $('select').formSelect();
+});
+
+//Event Listeners
