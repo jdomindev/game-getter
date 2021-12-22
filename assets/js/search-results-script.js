@@ -2,25 +2,29 @@ var raysApiKey = "key=a2f96b8c6ee949b1a819b121660cd2bf";
 var urlFront = "https://api.rawg.io/api/";
 
 
-const queryData = (filters) => {
-  let typeData;
-  let typeUrl = `${urlFront}games?${raysApiKey}`;
-  for (const [key, value] of Object.entries(filters)) {
-    const queryParam = `&${key}=${value.join(',')}`;
-    typeUrl += queryParam;
-  }
-
+const queryData = () => {
+  const queryParams = window.location.search.slice(1);
+  let queryUrl = `${urlFront}games?${raysApiKey}&${queryParams}`;
   $.ajax(
     {
-      url: typeUrl,
+      url: queryUrl,
       method:'GET'
     }
   )
   .then(data => {
-    console.log(data);
+    displayResults(data);
     }
   );
 };
+
+function displayResults(data) {
+  const results = data.results;
+  const next = data.next;
+  const previous = data.previous;
+  for (const result of results) {
+    searchByNameCheapShark(result);
+  }
+}
 
 //search for deals
 function queryDeals(){
@@ -33,15 +37,19 @@ function queryDeals(){
     })
   }
 //   need to move to index.html
-  function searchByNameCheapShark(gameName){
-      var searchUrl = `https://www.cheapshark.com/api/1.0/games?title=${gameName}`
+  function searchByNameCheapShark(game){
+      var searchUrl = `https://www.cheapshark.com/api/1.0/games?title=${game.name}`
       $.ajax({
           url:searchUrl,
           method:'GET'
       }).then(function(data){
           console.log(data);
+          if (data) {
+            makeCard(game, data);
+          }
       })
       
   }
   searchByNameCheapShark('Skyrim')
   queryDeals()
+  queryData();

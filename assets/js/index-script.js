@@ -15,7 +15,7 @@ const searchListener = (query, filters) => {
   } else {
     const filterParams = [];
     for (const [key, value] of Object.entries(filters)) {
-      const filterParam = `&${key}=${value.join(',')}`;
+      const filterParam = `${key}=${value.join(',')}`;
       filterParams.push(filterParam);
     }
     const queryString = queryParams.join('&');
