@@ -1,12 +1,20 @@
-/* @import url(‘https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap’); */
 
-h1 {
+body {
 font-family: Teko, sans-serif;
 }
 
-.navbar {
+.navbar, .page-footer {
     background-color: #6545B2;
 }
+
+.wishlist {
+    font-size: 20px !important;
+}
+
+.platform-dropdown {
+    padding: 0px !important;
+}
+
 
 .search {
     background-color: #6545B2;
@@ -24,3 +32,7 @@ font-family: Teko, sans-serif;
     background-color: #808080;
     color: white;
 }
+
+.page-footer {
+    padding-top: 0px !important;
+ }

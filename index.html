@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=“preconnect” href=“https://fonts.googleapis.com”>
-    <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin>
-    <link href=“https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap” rel=“stylesheet”>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
     <title>Game Getter</title>
   </head>
- 
+
   <body>
     <div class="navbar-fixed">
       <nav class="navbar">
         <div class="container">
           <div class="nav-wrapper">
             <a href="#" class="brand-logo">GameGetter</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <ul id="wishlist-wrapper" class="right">
               <li><i class="material-icons">card_giftcard</i></li>
-              <li><a href="#">Wishlist</a></li>
+              <li><a class="wishlist" href="#">Wishlist</a></li>
             </ul>
           </div>
         </div>
@@ -29,24 +45,34 @@
     <section class="slider">
       <ul class="slides">
         <li>
-          <img src="./assets/images/slider-1.jpg">
+          <img src="./assets/images/slider-1.jpg" />
           <div class="caption center-align">
-            <h3>Game Getter</h3>
-            <h5 class="light grey-text text-lighten-3">Find all games you want, at the prices you can afford.</h5>
+            <h1>Game Getter</h1>
+            <h5 class="light grey-text text-lighten-3">
+              Find all games you want, at the prices you can afford.
+            </h5>
           </div>
         </li>
         <li>
-          <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+          <img src="https://lorempixel.com/580/250/nature/2" />
+          <!-- random image -->
           <div class="caption left-align">
-            <h3>Check out our feature game!</h3>
-            <h5 class="light grey-text text-lighten-3">Featured games are showcased because of their popularity and current price.</h5>
+            <h2>Check out our featured game!</h2>
+            <h5 class="light grey-text text-lighten-3">
+              Featured games are showcased because of their popularity and
+              current price.
+            </h5>
           </div>
         </li>
         <li>
-          <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+          <img src="https://lorempixel.com/580/250/nature/3" />
+          <!-- random image -->
           <div class="caption right-align">
-            <h3>Add games you want to your wishlist</h3>
-            <h5 class="light grey-text text-lighten-3">Save games in your wishlist so they will be there for when you want them.</h5>
+            <h2>Add games you want to your wishlist</h2>
+            <h5 class="light grey-text text-lighten-3">
+              Save games in your wishlist so they will be there for when you
+              want them.
+            </h5>
           </div>
         </li>
       </ul>
@@ -57,44 +83,88 @@
           <div class="col s12">
             <h3>Search for games</h3>
             <div class="search-input">
-              <input type="type" class="white black-text" placeholder="Search for game titles, types, or platforms">
+              <input
+                type="type"
+                class="white black-text"
+                placeholder="Search for game titles, types, or platforms"/>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col s12">
-            <div class="dropdown center">
-              <label for="platforms">Platforms</label>
-              <select name="platforms" id="platforms-dropdown">
-                <option value="PC">PC</option>
-                <option value="Xbox Series X">Xbox Series X</option>
-                <option value="PS5">PS5</option>
-                <option value="Nintendo Switch">Nintendo Switch</option>
-                <option value="Xbox One">Xbox One</option>
-                <option value="PS4">PS4</option>
-                <option value="Mobile">Mobile</option>
-              </select>
+            <div class="row">
+              <div class="col s6 platform-dropdown">
+                <!-- Dropdown Trigger -->
+                <a class="dropdown-trigger btn" href="#" data-target="dropdown1">Platforms</a>
+                <!-- Dropdown Structure -->
+                <ul id="dropdown1" class="dropdown-content">
+                  <li><a value="4">PC</a></li>
+                  <li><a value="186">Xbox Series S/X</a></li>
+                  <li>
+                    <a value="187"><i class="“fa-brands" fa-playstation”></i>Playstation 5</a>
+                  </li>
+                  <li>
+                    <a value="1"><i class="“fa-brands" fa-xbox”></i>Xbox One</a>
+                  </li>
+                  <li>
+                    <a value="18"><i class="“fa-brands" fa-playstation”></i>Playstation 4</a>
+                  </li>
+                  <li>
+                    <a value="7"><i class=""></i>Nintendo Switch</a>
+                  </li>
+                  <li>
+                    <a value="3"><i class=""></i>iOS</a>
+                  </li>
+                  <li>
+                    <a value="21"><i class=""></i>Android</a>
+                  </li>
+                  <li>
+                    <a value="5"><i class=""></i>macOS</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section contact-section center">
+    <section class="section section-contact center">
       <div class="container">
         <div class="row">
-          <div class="col s12">
-            <h4>Contact us... or don't your call</h4>
+          <div class="col s6">
+            <h5 class="white-text">Get in Contact With Us</h5>
+            <p class="grey-text text-lighten-4">Or don’t. Your call.</p>
+          </div>
+          <div class="col s6">
+            <h5 class="white-text">Get Links</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">gamegetter@getgood.com</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="https://twitter.com/">Twitter</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="http://www.youtube.com/">YouTube</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="https://github.com/">GitHub</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
-
-
-
-
-
-
-
+    <footer class="page-footer center">
+      <div class="footer-copyright">
+        <div class="container">
+          <h6>
+            © 2021 Game Getter ||
+            <a class="blue-text text-lighten-4" href="https://www.boredpanda.com/unusual-frogs-toads/?utm_source=google&utm_medium=organic&utm_campaign=organic">Get Good</a>
+          </h6>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
@@ -102,16 +172,17 @@
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
     <script>
       // slider script
-      // $(document).ready(function(){
-      // $('.slider').slider({duration: 700});
-      // });
       var slider = document.querySelector(".slider");
       M.Slider.init(slider, {
         indicators: false,
         height: 350,
         transition: 800,
-        interval: 6000
-      })
+        interval: 6000,
+      });
+
+      // dropdown script
+      var dropdown = document.querySelectorAll(".dropdown-trigger");
+      M.Dropdown.init(dropdown, {});
     </script>
   </body>
 </html>
