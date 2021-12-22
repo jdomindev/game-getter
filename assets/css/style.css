@@ -1,0 +1,26 @@
+/* @import url(‘https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap’); */
+
+h1 {
+font-family: Teko, sans-serif;
+}
+
+.navbar {
+    background-color: #6545B2;
+}
+
+.search {
+    background-color: #6545B2;
+    font-size: 20px !important;
+
+}
+
+.search input {
+    width: 80%;
+    padding: 10px;
+    border: #4f4f4f 3px solid;
+}
+
+.contact-section {
+    background-color: #808080;
+    color: white;
+}

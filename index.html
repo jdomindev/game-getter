@@ -2,17 +2,116 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Getter</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel=“preconnect” href=“https://fonts.googleapis.com”>
+    <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin>
+    <link href=“https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap” rel=“stylesheet”>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <title>Game Getter</title>
   </head>
-  
+ 
   <body>
+    <div class="navbar-fixed">
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo">GameGetter</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><i class="material-icons">card_giftcard</i></li>
+              <li><a href="#">Wishlist</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <section class="slider">
+      <ul class="slides">
+        <li>
+          <img src="./assets/images/slider-1.jpg">
+          <div class="caption center-align">
+            <h3>Game Getter</h3>
+            <h5 class="light grey-text text-lighten-3">Find all games you want, at the prices you can afford.</h5>
+          </div>
+        </li>
+        <li>
+          <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+          <div class="caption left-align">
+            <h3>Check out our feature game!</h3>
+            <h5 class="light grey-text text-lighten-3">Featured games are showcased because of their popularity and current price.</h5>
+          </div>
+        </li>
+        <li>
+          <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+          <div class="caption right-align">
+            <h3>Add games you want to your wishlist</h3>
+            <h5 class="light grey-text text-lighten-3">Save games in your wishlist so they will be there for when you want them.</h5>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="search" class="section search white-text center">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <h3>Search for games</h3>
+            <div class="search-input">
+              <input type="type" class="white black-text" placeholder="Search for game titles, types, or platforms">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <div class="dropdown center">
+              <label for="platforms">Platforms</label>
+              <select name="platforms" id="platforms-dropdown">
+                <option value="PC">PC</option>
+                <option value="Xbox Series X">Xbox Series X</option>
+                <option value="PS5">PS5</option>
+                <option value="Nintendo Switch">Nintendo Switch</option>
+                <option value="Xbox One">Xbox One</option>
+                <option value="PS4">PS4</option>
+                <option value="Mobile">Mobile</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section contact-section center">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <h4>Contact us... or don't your call</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script>
+      // slider script
+      // $(document).ready(function(){
+      // $('.slider').slider({duration: 700});
+      // });
+      var slider = document.querySelector(".slider");
+      M.Slider.init(slider, {
+        indicators: false,
+        height: 350,
+        transition: 800,
+        interval: 6000
+      })
+    </script>
   </body>
 </html>
