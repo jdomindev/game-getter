@@ -19,13 +19,30 @@ font-family: Teko, sans-serif;
 .search {
     background-color: #6545B2;
     font-size: 20px !important;
-
 }
 
-.search input {
+.button {
+  border-radius: 5px;
+  padding: 8px;
+  background-color: #808080;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:active {
+  padding: 7px;
+}
+
+#search-input {
     width: 80%;
     padding: 10px;
     border: #4f4f4f 3px solid;
+}
+
+#search-button {
+  display: inline-block;
 }
 
 .contact-section {

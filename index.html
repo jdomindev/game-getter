@@ -82,11 +82,12 @@
         <div class="row">
           <div class="col s12">
             <h3>Search for games</h3>
-            <div class="search-input">
-              <input
+            <div class="search-bar">
+              <input id="search-input"
                 type="type"
                 class="white black-text"
-                placeholder="Search for game titles, types, or platforms"/>
+                placeholder="Enter keyword(s)"/>
+              <div id="search-button" class="button">Search</div>
             </div>
           </div>
         </div>
@@ -94,13 +95,12 @@
           <div class="col s12">
             <div class="row">
               <div class="input-field col s6">
-                <select multiple>
-                  <option value="" disabled selected>---</option>
+                <select multiple id="platform-select">
                   <option value="4">PC</option>
                   <option value="186">Xbox Series S/X</option>
-                  <option value="187">Playstation 5</option>
+                  <option value="187">PlayStation 5</option>
                   <option value="1">Xbox One</option>
-                  <option value="18">Playstation 4</option>
+                  <option value="18">PlayStation 4</option>
                   <option value="7">Nintendo Switch</option>
                   <option value="3">iOS</option>
                   <option value="21">Android</option>
@@ -108,9 +108,8 @@
                 </select>
                 <label>Choose your platform(s):</label>
               </div>
-              <div class="input-field col s6">
+              <div class="input-field col s6" id="genre-select">
                 <select multiple>
-                  <option value="" disabled selected>---</option>
                   <option value="1">Option 1</option>
                   <option value="2">Option 2</option>
                   <option value="3">Option 3</option>
