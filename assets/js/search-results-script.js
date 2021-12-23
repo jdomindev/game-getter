@@ -53,3 +53,5 @@ function queryDeals(){
   searchByNameCheapShark('Skyrim')
   queryDeals()
   queryData();
+
+  
