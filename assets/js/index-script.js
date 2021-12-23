@@ -1,66 +1,71 @@
+var raysApiKey = "key=a2f96b8c6ee949b1a819b121660cd2bf";
+var urlFront = "https://api.rawg.io/api/";
+
 const searchListener = (query, filters) => {
   if (!query && filters.keys.length === 0) {
-    $('#modal').dialog({
+    $("#modal").dialog({
       modal: true,
       draggable: false,
       buttons: [
         {
           text: "OK",
-          click: (function() {
+          click: function () {
             $(this).dialog("close");
-          })
-        }
-      ]
-    })
+          },
+        },
+      ],
+    });
   } else {
     const filterParams = [];
     for (const [key, value] of Object.entries(filters)) {
-      const filterParam = `${key}=${value.join(',')}`;
+      const filterParam = `${key}=${value.join(",")}`;
       filterParams.push(filterParam);
     }
-    const filterString = filterParams.join('&');
-    window.location.replace(`search-results.html?search=${query}&${filterString}`);
+    const filterString = filterParams.join("&");
+    window.location.replace(
+      `search-results.html?search=${query}&${filterString}`
+    );
   }
-}
+};
 
 //Called on load
-$(document).ready(function() {
-  $('select').formSelect();
+$(document).ready(function () {
+  $("select").formSelect();
 });
 
 //search for deals
 function queryDeals() {
-    var cheapSharkUrl = "https://www.cheapshark.com/api/1.0/deals";
-    $.ajax({
-      url: cheapSharkUrl,
-      method: "GET",
-    }).then(function (data) {
-      console.log(data);
-      for (i = 0; i < data.length; i++) {
-        var topCard = $("<div>").attr("class", "border");
-        var name = $("<p>").css("font-weight", "bold");
-        name.text(data[i].title)
-        topCard.append(name)
-        $(".topGetsContainer").append(topCard);
-        console.log(data[i].title);
-      }
-  
-      
-    });
-  }
-  queryDeals();
+  var cheapSharkUrl = "https://www.cheapshark.com/api/1.0/deals";
+  $.ajax({
+    url: cheapSharkUrl,
+    method: "GET",
+  }).then(function(data) {
+    for (i = 0; i < data.length; i++) {
+      displayCards(data, $(".topGetsContainer"));
+    }
+  });
+}
+queryDeals();
 
 //Event Listeners
-$('#search-button').click(function() {
-  const keywords = $('#search-input').val();
+$("#search-button").click(function () {
+  const keywords = $("#search-input").val();
   const filters = {};
 
-  const platforms = $('#platform-select').getSelectedValues();
+
+  const platformSelect = document.querySelector('#platform-select');
+  const platformInstance = M.FormSelect.getInstance(platformSelect);
+  const platforms = platformInstance.getSelectedValues();
+
   if (platforms.length > 0) {
     filters.platforms = platforms;
   }
 
-  const genres = $('#genre-select').getSelectedValues();
+
+  const genreSelect = document.querySelector('#genre-select');
+  const genreInstance = M.FormSelect.getInstance(genreSelect);
+  const genres = genreInstance.getSelectedValues();
+
   if (genres.length > 0) {
     filters.genres = genres;
   }
