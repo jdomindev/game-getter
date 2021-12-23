@@ -1,30 +1,49 @@
+:root {
+  --primary-color: #6545B2;
+  --secondary-color: #808080;
+  --tertiary-color: #4f4f4f;
+}
 
 body {
 font-family: Teko, sans-serif;
+background-color: var(--secondary-color);
 }
 
+/* Header + Footer */
+
 .navbar, .page-footer {
-    background-color: #6545B2;
+    background-color: var(--primary-color);
+}
+
+.brand-logo {
+  font-size: 30px !important
 }
 
 .wishlist {
-    font-size: 20px !important;
+  font-size: 25px !important;
 }
 
-.platform-dropdown {
-    padding: 0px !important;
+.page-footer {
+  padding-top: 0px !important;
 }
 
+/* Search bar */
 
 .search {
-    background-color: #6545B2;
+    background-color: var(--primary-color);
     font-size: 20px !important;
+}
+
+#search-input {
+  width: 80%;
+  padding: 10px;
+  border: #4f4f4f 3px solid;
 }
 
 .button {
   border-radius: 5px;
   padding: 8px;
-  background-color: #808080;
+  background-color: var(--secondary-color);
 }
 
 .button:hover {
@@ -35,25 +54,37 @@ font-family: Teko, sans-serif;
   padding: 7px;
 }
 
-#search-input {
-    width: 80%;
-    padding: 10px;
-    border: #4f4f4f 3px solid;
-}
-
 #search-button {
   display: inline-block;
+  /* position: relative;
+  bottom: 4.25px; */
 }
 
-.contact-section {
-    background-color: #808080;
-    color: white;
+/* Select drop downs */
+
+.select-label {
+  font-size: 20px !important;
 }
 
-.page-footer {
-    padding-top: 0px !important;
- }
+/* Contact section */
 
- .option {
-   font-family: 'FontAwesome';
- }
+.section-contact {
+  background-color: var(--tertiary-color);
+}
+
+.row-contact {
+  margin-bottom: 0px;
+}
+
+.link-list > li {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.link {
+  font-size: 20px;
+}
+
+@media (min-width:375px)  {
+  
+}
