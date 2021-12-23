@@ -16,7 +16,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ```
 ## Credits
 - Jose Dominguez - https://github.com/jdomindev
-- Ryan Kaplan - https://github.com/rykaplan1
+- Rich Kaplan - https://github.com/rykaplan1
 - Will Torrence - https://github.com/saddestghost
 - Ray Hewitt - https://github.com/Rayman244
 
