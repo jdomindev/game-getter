@@ -30,8 +30,8 @@ background-color: var(--secondary-color);
 /* Search bar */
 
 .search {
-    background-color: var(--primary-color);
-    font-size: 20px !important;
+  background-color: var(--primary-color);
+  font-size: 20px !important;
 }
 
 #search-input {
@@ -86,5 +86,7 @@ background-color: var(--secondary-color);
 }
 
 @media (min-width:375px)  {
-  
+  .select-label {
+    font-size: 15px !important;
+  }
 }
