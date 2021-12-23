@@ -1,4 +1,6 @@
 function createCard(game, stores) {
+  const storeData = stores.filter(store => store.storeID === game.storeID);
+  const storeName = storeData[0].storeName;
   var card = $("<div>").attr("class", "card");
   var cardImage = $("<div>").attr("class", "card-image");
   var img = $("<img>");
@@ -9,7 +11,21 @@ function createCard(game, stores) {
   );
   var btnContent = $("<i>").attr("class", "material-icons");
   btnContent.text("add");
-  addBtn.append(btnContent);
+  addBtn.append(btnContent).data('game', game).click(function() {
+    if (!localStorage.getItem('wishList')) {
+      localStorage.setItem('wishList', '[]');
+    }
+    const wishList = JSON.parse(localStorage.getItem('wishList'));
+    const instanceTitle = $(this).data("game").title;
+    const instanceStoreID = $(this).data("game").storeID;
+    const listFilter = wishList.filter(item => item.title === instanceTitle && item.storeID === instanceStoreID);
+    if (listFilter.length === 0) {
+      wishList.push($(this).data("game"));
+      localStorage.setItem('wishList', JSON.stringify(wishList));
+    } else {
+      M.toast({html: `${instanceTitle} from ${storeName} already in wish list`});
+    }
+  });
   cardTitle.text(game.title);
 
   img.attr("src", game.thumb);
@@ -21,23 +37,19 @@ function createCard(game, stores) {
   
   const cardContent = $("<div>").attr("class", "card-content");
 
-  const storeData = stores.filter(store => store.storeID === game.storeID);
-  if (storeData.length > 0) {
-    const storeName = storeData[0].storeName;
-    const normalPrice = game.normalPrice;
-    const salePrice = game.salePrice;
-    const savings = Math.round(game.savings);
-    const storeSpan = $("<span>").attr('class', 'store-name').text(storeName);
-    const normalPriceSpan = $("<span>").attr('class', 'normal-price').text(normalPrice).css('text-decoration', 'line-through');
-    const salePriceSpan = $("<span>").attr('class', 'sale-price').text(salePrice);
-    const savingsSpan = $("<span>").attr('class', 'savings').text(`${savings}%`);
+  const normalPrice = game.normalPrice;
+  const salePrice = game.salePrice;
+  const savings = Math.round(game.savings);
+  const storeSpan = $("<span>").attr('class', 'store-name').text(storeName);
+  const normalPriceSpan = $("<span>").attr('class', 'normal-price').text(normalPrice).css('text-decoration', 'line-through');
+  const salePriceSpan = $("<span>").attr('class', 'sale-price').text(salePrice);
+  const savingsSpan = $("<span>").attr('class', 'savings').text(`${savings}%`);
 
-    const cardDeal = $("<span>").append([storeSpan, normalPriceSpan, salePriceSpan, savingsSpan]).css({"display": "flex", "justify-content": "space-between"});
-    cardContent.append(cardDeal);
-    card.append(cardContent);
+  const cardDeal = $("<span>").append([storeSpan, normalPriceSpan, salePriceSpan, savingsSpan]).css({"display": "flex", "justify-content": "space-between"});
+  cardContent.append(cardDeal);
+  card.append(cardContent);
 
-    return card;
-  }
+  return card;
 }
 
 function displayCards(cheapsharkData, container){
@@ -49,7 +61,6 @@ function displayCards(cheapsharkData, container){
     }
   )
   .then(stores => {
-    console.log(cheapsharkData);
     for (let i = 0; i < cheapsharkData.length; i++) {
       const card = createCard(cheapsharkData[i], stores);
       container.append(card);
