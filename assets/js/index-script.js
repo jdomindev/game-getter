@@ -39,47 +39,13 @@ function queryDeals() {
   $.ajax({
     url: cheapSharkUrl,
     method: "GET",
-  }).then(function (data) {
-    console.log(data);
-    // createCard(data)
-    displayTopGets(data)
+  }).then(function(data) {
+    for (i = 0; i < data.length; i++) {
+      displayCards(data, $(".topGetsContainer"));
+    }
   });
 }
 queryDeals();
-
-function displayTopGets(cheapsharkData){
-  console.log(cheapsharkData);
-  for(i=0;i<cheapsharkData.length;i++){
-   var game= cheapsharkData[i]
-
-  }
-}
-
-function createCard(game) {
- 
-    var card = $("<div>").attr("class", "card");
-    var cardImage = $("<div>").attr("class", "card-image");
-    var img = $("<img>");
-    var cardTitle = $("<p>").css("class", "card-title");
-    var addBtn = $("<a>").attr(
-      "class",
-      "btn-floating halfway-fab waves-effect waves-light red"
-    );
-    var btnContent = $("<i>").attr("class", "material-icons");
-    btnContent.text("add");
-    addBtn.append(btnContent);
-    cardTitle.text(data[i].title);
-
-    img.attr("src", data[i].thumb);
-    img.attr("alt", "Sorry No Image Found");
-
-    cardImage.append(img,cardTitle,addBtn);
-    card.append(cardImage);
-
-    $(".topGetsContainer").append(card);
-    console.log(data[i]);
-  
-}
 
 //Event Listeners
 $("#search-button").click(function () {
