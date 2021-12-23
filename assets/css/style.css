@@ -56,8 +56,8 @@ background-color: var(--secondary-color);
 
 #search-button {
   display: inline-block;
-  /* position: relative;
-  bottom: 4.25px; */
+  position: relative;
+  bottom: 4.25px;
 }
 
 /* Select drop downs */
@@ -85,8 +85,15 @@ background-color: var(--secondary-color);
   font-size: 20px;
 }
 
-@media (min-width:375px)  {
+@media (max-width:425px)  {
   .select-label {
     font-size: 15px !important;
+  }
+}
+
+@media (max-width:403px) {
+  #search-button {
+    position: relative;
+    bottom: 0;
   }
 }
