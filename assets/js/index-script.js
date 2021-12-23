@@ -55,12 +55,16 @@ $('#search-button').click(function() {
   const keywords = $('#search-input').val();
   const filters = {};
 
-  const platforms = $('#platform-select').getSelectedValues();
+  const platformSelect = document.querySelector('#platform-select');
+  const platformInstance = M.FormSelect.getInstance(platformSelect);
+  const platforms = platformInstance.getSelectedValues();
   if (platforms.length > 0) {
     filters.platforms = platforms;
   }
 
-  const genres = $('#genre-select').getSelectedValues();
+  const genreSelect = document.querySelector('#genre-select');
+  const genreInstance = M.FormSelect.getInstance(genreSelect);
+  const genres = genreInstance.getSelectedValues();
   if (genres.length > 0) {
     filters.genres = genres;
   }
