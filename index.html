@@ -33,10 +33,9 @@
       <nav class="navbar">
         <div class="container">
           <div class="nav-wrapper">
-            <a href="#" class="brand-logo">GameGetter</a>
+            <a href="index.html" class="brand-logo">GameGetter</a>
             <ul id="wishlist-wrapper" class="right">
-              <li><i class="material-icons">card_giftcard</i></li>
-              <li><a class="wishlist" href="#">Wishlist</a></li>
+              <li><a class="wishlist" href="#"><i class="fas fa-gift"></i> Wishlist</a></li>
             </ul>
           </div>
         </div>
@@ -54,9 +53,8 @@
           </div>
         </li>
         <li>
-          <img src="https://lorempixel.com/580/250/nature/2" />
-          <!-- random image -->
-          <div class="caption left-align">
+          <img src="./assets/images/slider-2.jpg"/>         
+          <div class="caption right-align">
             <h2>Check out our featured game!</h2>
             <h5 class="light grey-text text-lighten-3">
               Featured games are showcased because of their popularity and
@@ -65,13 +63,11 @@
           </div>
         </li>
         <li>
-          <img src="https://lorempixel.com/580/250/nature/3" />
-          <!-- random image -->
-          <div class="caption right-align">
+          <img src="./assets/images/slider-4.jpg"/>
+          <div class="caption left-align">
             <h2>Add games you want to your wishlist</h2>
             <h5 class="light grey-text text-lighten-3">
-              Save games in your wishlist so they will be there for when you
-              want them.
+              Games in your wishlist will be there for when you want them.
             </h5>
           </div>
         </li>
@@ -97,7 +93,7 @@
               <div class="input-field col s6">
                 <select multiple id="platform-select">
                   <option value="4">PC</option>
-                  <option value="186">Xbox Series S/X</option>
+                  <option value="186">Xbox Series S/X</i></option>
                   <option value="187">PlayStation 5</option>
                   <option value="1">Xbox One</option>
                   <option value="18">PlayStation 4</option>
@@ -106,43 +102,58 @@
                   <option value="21">Android</option>
                   <option value="5">macOS</option>
                 </select>
-                <label>Choose your platform(s):</label>
+                <label class="select-label">Choose your platform(s)</label>
               </div>
-              <div class="input-field col s6" id="genre-select">
-                <select multiple>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
+              <div class="input-field col s6">
+                <select multiple id="genre-select">
+                  <option value="action">Action</option>
+                  <option value="indie">Indie</option>
+                  <option value="adventure">Adventure</option>
+                  <option value="role-playing-games-rpg">RPG</option>
+                  <option value="strategy">Strategy</option>
+                  <option value="shooter">Shooter</option>
+                  <option value="casual">Casual</option>
+                  <option value="simulation">Simulation</option>
+                  <option value="puzzle">Puzzle</option>
+                  <option value="arcade">Arcade</option>
+                  <option value="platformer">Platformer</option>
+                  <option value="racing">Racing</option>
+                  <option value="massively-multiplayer">MMO</option>
+                  <option value="sports">Sports</option>
+                  <option value="fighting">Fighting</option>
+                  <option value="family">Family</option>
+                  <option value="board-games">Board Games</option>
+                  <option value="educational">Educational</option>
+                  <option value="card">Card</option>
                 </select>
-                <label>Filter by genre:</label>
+                <label class="select-label">Filter by genre</label>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="container topGetsContainer"></section>
+    <section class="container topGetsContainer">
+      <h3>Top Gets</h3>
+    </section>
     <section class="section section-contact center">
       <div class="container">
-        <div class="row">
+        <div class="row valign-wrapper row-contact">
           <div class="col s6">
-            <h5 class="white-text">Get in Contact With Us</h5>
-            <p class="grey-text text-lighten-4">Or don’t. Your call.</p>
+            <h4 class="white-text">Contact Us</h4>
+            <p class="grey-text text-lighten-4 link">Or don’t. Your call.</p>
           </div>
           <div class="col s6">
-            <h5 class="white-text">Get Links</h5>
-            <ul>
+            <h4 class="white-text">Get Links</h4>
+            <ul class="link-list">
               <li>
-                <a class="grey-text text-lighten-3" href="#!">gamegetter@getgood.com</a>
+                <a class="grey-text text-lighten-3 link" href="https://twitter.com/">Twitter</a>
               </li>
               <li>
-                <a class="grey-text text-lighten-3" href="https://twitter.com/">Twitter</a>
+                <a class="grey-text text-lighten-3 link" href="http://www.youtube.com/">YouTube</a>
               </li>
               <li>
-                <a class="grey-text text-lighten-3" href="http://www.youtube.com/">YouTube</a>
-              </li>
-              <li>
-                <a class="grey-text text-lighten-3" href="https://github.com/">GitHub</a>
+                <a class="grey-text text-lighten-3 link" href="https://github.com/">GitHub</a>
               </li>
             </ul>
           </div>
@@ -163,16 +174,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="assets/js/utilities.js"></script>
     <script src="assets/js/index-script.js"></script>
     <script>
       // slider script
       var slider = document.querySelector(".slider");
       M.Slider.init(slider, {
         indicators: false,
-        height: 350,
+        height: 400,
         transition: 800,
         interval: 6000,
       });
+
+      var brandLogo = document.querySelector(".brand-logo")
+      brandLogo.classList.add("left")
     </script>
   </body>
 </html>
