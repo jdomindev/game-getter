@@ -20,6 +20,13 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 - Will Torrence - https://github.com/saddestghost
 - Ray Hewitt - https://github.com/Rayman244
 
+Unsplash Photos
+ - Jakub Sisulak - https://unsplash.com/@jakub_si
+ - Igor Karimov - https://unsplash.com/@ingvar_erik
+
+Reddit Photos
+ - u/maxrip - https://www.reddit.com/r/battlestations/comments/mce1sv/ive_always_been_a_black_gold_type_of_person_this/
+
 ## License
 MIT License
 
@@ -53,5 +60,7 @@ SOFTWARE.
 ![RawG Api](https://img.shields.io/badge/API-RawG-purple)
 ![CheapShark](https://img.shields.io/badge/API-MIT-purple)
 ## Features
-If your project has a lot of features, list them here.
+ - Search by games, name, console, genre 
+ - Compair Prices
+
 
