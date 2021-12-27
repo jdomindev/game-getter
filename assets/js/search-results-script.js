@@ -1,5 +1,3 @@
-const raysApiKey = "key=a2f96b8c6ee949b1a819b121660cd2bf";
-const urlFront = "https://api.rawg.io/api/";
 let next;
 let previous;
 let count;
@@ -37,7 +35,7 @@ function searchByNameCheapShark(game){
         method:'GET'
     }).then(function(data){
         if (data.length > 0) {
-          displayCards(data, $('#results'));
+          displayCards(data, $('.searchResultsContainer'));
         }
     })
   }

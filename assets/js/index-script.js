@@ -1,5 +1,5 @@
-var raysApiKey = "key=a2f96b8c6ee949b1a819b121660cd2bf";
-var urlFront = "https://api.rawg.io/api/";
+var brandLogo = document.querySelector(".brand-logo")
+      brandLogo.classList.add("left")
 
 const searchListener = (query, filters) => {
   if (!query && filters.keys.length === 0) {
