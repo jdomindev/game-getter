@@ -92,7 +92,7 @@ background-color: var(--secondary-color);
   width: 45%;
   background-color: var(--primary-color);
   color: white;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .card-content {

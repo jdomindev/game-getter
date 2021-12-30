@@ -1,19 +1,17 @@
 # game-getter
 
-
 ## Description
  Find the best deal for the game you desire. this site leverages the RawG api as well as the cheapshark api to bring the best deal from all over the web. Get in the Game Now!
 
-
 ## Installation
-No instalation required go to https://jdomindev.github.io/game-getter/ to get the game you want for the best price
+No installation required go to https://jdomindev.github.io/game-getter/ to get the game you want for the best price.
 
 ## Usage
-Provide instructions and examples for use. Include screenshots as needed.
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+- Repo Link: https://github.com/jdomindev/game-getter
+- Screenshots: 
+    ![Screenshot1](./assets/images/screenshots/home-page.png)
+    ![Screenshot2](./assets/images/screenshots/search-results.png)
+    ![Screenshot3](./assets/images/screenshots/wishlist.png)
 ## Credits
 - Jose Dominguez - https://github.com/jdomindev
 - Rich Kaplan - https://github.com/rykaplan1
@@ -61,6 +59,6 @@ SOFTWARE.
 ![CheapShark](https://img.shields.io/badge/API-MIT-purple)
 ## Features
  - Search by games, name, console, genre 
- - Compair Prices
+ - Compare Prices
 
 
