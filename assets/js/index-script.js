@@ -35,14 +35,12 @@ $(document).ready(function () {
 
 //search for deals
 function queryDeals() {
-  var cheapSharkUrl = "https://www.cheapshark.com/api/1.0/deals";
+  var cheapSharkUrl = "https://www.cheapshark.com/api/1.0/deals?pageSize=10";
   $.ajax({
     url: cheapSharkUrl,
     method: "GET",
   }).then(function(data) {
-    for (i = 0; i < data.length; i++) {
-      displayCards(data, $(".topGetsContainer"));
-    }
+    displayCards(data, $(".topGetsContainer"));
   });
 }
 queryDeals();
