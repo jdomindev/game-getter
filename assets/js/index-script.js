@@ -1,5 +1,5 @@
-var raysApiKey = "key=a2f96b8c6ee949b1a819b121660cd2bf";
-var urlFront = "https://api.rawg.io/api/";
+var brandLogo = document.querySelector(".brand-logo")
+      brandLogo.classList.add("left")
 
 const searchListener = (query, filters) => {
   if (!query && filters.keys.length === 0) {
@@ -35,14 +35,12 @@ $(document).ready(function () {
 
 //search for deals
 function queryDeals() {
-  var cheapSharkUrl = "https://www.cheapshark.com/api/1.0/deals";
+  var cheapSharkUrl = "https://www.cheapshark.com/api/1.0/deals?pageSize=10";
   $.ajax({
     url: cheapSharkUrl,
     method: "GET",
   }).then(function(data) {
-    for (i = 0; i < data.length; i++) {
-      displayCards(data, $(".topGetsContainer"));
-    }
+    displayCards(data, $(".topGetsContainer"));
   });
 }
 queryDeals();

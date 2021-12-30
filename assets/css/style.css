@@ -85,9 +85,82 @@ background-color: var(--secondary-color);
   font-size: 20px;
 }
 
+/* Card Styles */
+
+.card {
+  margin: 30px auto;
+  width: 45%;
+  background-color: var(--primary-color);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-content {
+  margin: auto 0;
+}
+
+span {
+  align-items: center;
+}
+
+.card-title {
+  font-size: 30px !important;
+  margin: 0px;
+}
+
+.card-img {
+  object-fit: contain;
+  height: 400px; 
+}
+
+.store-name {
+  font-size: 20px !important;
+}
+
+.normal-price {
+  color: rgb(167, 167, 167);
+}
+
+.add-button {
+  position: relative;
+  bottom: 5px !important;
+}
+
+/* Search Results Page */
+
+.topGetsContainer, .searchResultsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.search-result {
+  text-align: left;
+}
+
+#page-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+#next, #previous {
+  display: none;
+  color: white;
+  background-color: var(--primary-color);
+  width: 50%;
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
 @media (max-width:425px)  {
   .select-label {
     font-size: 15px !important;
+  }
+}
+
+@media (max-width:768px) {
+  .card {
+    width: 100%;
   }
 }
 

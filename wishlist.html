@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Getter | Wishlist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Teko:wght@600&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">GameGetter</a>
+            <ul id="wishlist-wrapper" class="right">
+              <li><a class="wishlist" href="#"><i class="fas fa-gift"></i> Wishlist</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <section class="section center">
+      <div class="container">
+        <div class="row">
+          <h3 class="search-result white-text col s12">Wishlist</h3>
+        </div>
+        <div class="wishlistContainer"></div>
+      </div>
+    </section>
+    <section class="section section-contact center">
+      <div class="container">
+        <div class="row valign-wrapper row-contact">
+          <div class="col s6">
+            <h4 class="white-text">Contact Us</h4>
+            <p class="grey-text text-lighten-4 link">Or don’t. Your call.</p>
+          </div>
+          <div class="col s6">
+            <h4 class="white-text">Get Links</h4>
+            <ul class="link-list">
+              <li>
+                <a class="grey-text text-lighten-3 link" href="https://twitter.com/">Twitter</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3 link" href="http://www.youtube.com/">YouTube</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3 link" href="https://github.com/">GitHub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="page-footer center">
+      <div class="footer-copyright">
+        <div class="container">
+          <h6>
+            © 2021 Game Getter ||
+            <a class="blue-text text-lighten-4" href="https://www.boredpanda.com/unusual-frogs-toads/?utm_source=google&utm_medium=organic&utm_campaign=organic">Get Good</a>
+          </h6>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="assets/js/utilities.js"></script>
+    <script src="assets/js/index-script.js"></script>
+    <script src="./assets/js/search-results-script.js"></script>
+    <script src="./assets/js/wishlist-script.js"></script>
+    <script>
+      var brandLogo = document.querySelector(".brand-logo")
+      brandLogo.classList.add("left")
+    </script>
+  </body>
+</html>
