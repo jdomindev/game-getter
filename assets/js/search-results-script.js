@@ -2,6 +2,12 @@ let next;
 let previous;
 let count;
 
+const activatePageButton = (url, button) => {
+  $(`#${button}`).click(() => {
+    const query = url.slice(url.indexOf('&') + 1);
+    window.location.replace(`search-results.html?${query}`);
+  }).css('display', 'inline');
+}
 
 const queryData = () => {
   const queryParams = window.location.search.slice(1);
@@ -20,9 +26,20 @@ const queryData = () => {
 
 function collectResults(data) {
   const results = data.results;
-  next = data.next;
-  previous = data.previous;
+  const pageButtons = {};
+  pageButtons.previous = data.previous;
+  pageButtons.next = data.next;
+
+  for (const button in pageButtons) {
+    const url = pageButtons[button];
+    if (url) {
+      activatePageButton(url, button);
+    }
+  }
+
   count = data.count;
+  $('#search-results').text(`Deals for ${data.count} games`);
+
   for (const result of results) {
     searchByNameCheapShark(result);
   }
