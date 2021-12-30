@@ -22,6 +22,10 @@ background-color: var(--secondary-color);
 .wishlist {
   font-size: 25px !important;
 }
+/* #contactLink{
+  display: flex;
+
+} */
 
 .page-footer {
   padding-top: 0px !important;
