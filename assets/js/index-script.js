@@ -2,19 +2,8 @@ var brandLogo = document.querySelector(".brand-logo")
       brandLogo.classList.add("left")
 
 const searchListener = (query, filters) => {
-  if (!query && filters.keys.length === 0) {
-    $("#modal").dialog({
-      modal: true,
-      draggable: false,
-      buttons: [
-        {
-          text: "OK",
-          click: function () {
-            $(this).dialog("close");
-          },
-        },
-      ],
-    });
+  if (!query && !filters.keys) {
+    $('.modal').modal('open');
   } else {
     const filterParams = [];
     for (const [key, value] of Object.entries(filters)) {
@@ -30,6 +19,7 @@ const searchListener = (query, filters) => {
 
 //Called on load
 $(document).ready(function () {
+  $("#modal").modal();
   $("select").formSelect();
 });
 

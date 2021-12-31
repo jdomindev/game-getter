@@ -130,6 +130,23 @@ span {
   bottom: 5px !important;
 }
 
+/* Modal */
+#modal {
+ padding: 10px;
+}
+
+#modal, .modal-footer .button {
+  font-size: 1.5rem;
+}
+
+.modal-footer .button {
+  color: white;
+  background-color: var(--primary-color);
+  text-align: center;
+  height: 100%;
+  width: 10%;
+}
+
 /* Search Results Page */
 
 .topGetsContainer, .searchResultsContainer {
