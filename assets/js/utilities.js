@@ -1,4 +1,4 @@
-const josesApiKey = "13f0865d360448869a9a58bf94ea926f";
+const josesApiKey = "key=13f0865d360448869a9a58bf94ea926f";
 var urlFront = "https://api.rawg.io/api/";
 
 function createCard(game, stores, isWishList) {
