@@ -11,7 +11,7 @@ const activatePageButton = (url, button) => {
 
 const queryData = () => {
   const queryParams = window.location.search.slice(1);
-  let queryUrl = `${urlFront}games?${raysApiKey}&${queryParams}`;
+  let queryUrl = `${urlFront}games?${josesApiKey}&${queryParams}`;
   $.ajax(
     {
       url: queryUrl,
