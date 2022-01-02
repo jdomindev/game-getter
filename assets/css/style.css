@@ -3,10 +3,13 @@
   --secondary-color: #808080;
   --tertiary-color: #4f4f4f;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body {
 font-family: Teko, sans-serif;
 background-color: var(--secondary-color);
+
 }
 
 /* Header + Footer */
@@ -22,10 +25,8 @@ background-color: var(--secondary-color);
 .wishlist {
   font-size: 25px !important;
 }
-/* #contactLink{
-  display: flex;
 
-} */
+
 
 .page-footer {
   padding-top: 0px !important;
